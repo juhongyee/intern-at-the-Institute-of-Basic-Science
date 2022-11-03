@@ -120,9 +120,10 @@ while(len(schedule) < N):
     makeForest(maxRhoNode.root, maxRhoNode.path)
 
 end = time.time()
-#print("schedule : ", schedule)
 
-print(f"{end-start:.5f} sec") #0.03237 sec
+print("schedule : ", schedule)
+
+#print(f"{end-start:.5f} sec") #0.03237 sec
 
 # schedule :  [1, 2, 3, 4, 5, 10, 11, 12, 13, 14, 
 #              18, 24, 25, 27, 28, 29, 30, 26, 31, 34, 
