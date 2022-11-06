@@ -24,9 +24,7 @@ def init():
 
     global N
     for i in range(0, N):
-        #print("i : ", i)
         row = df.loc[i]
-        #print("row : " ,row)
         item = row[0]
         pred = row[1]
         c = row[2]
@@ -38,10 +36,8 @@ def init():
             nodelist[0].root = nodelist[0]
             nodelist[0].mu = mu_int
             forest[str(nodelist[0].item)] = nodelist[0]
-            #print("root:",nodelist[0])
             continue
         nodelist[i] = Node(item, c)
-        #print("node : ",nodelist[i])
         nodelist[i].mu = mu_int
         nodelist[i].root = nodelist[0]
         pred_node = nodelist[pred - 1]
@@ -102,6 +98,19 @@ def makeForest(node, path):
         makeRoot(node)
         return
 
+def getReward(sched):
+    time = 0
+    reward = 0
+    ck = 0
+    for i in (sched):
+        #print("sched ",i)
+        n = nodelist[i-1]
+        #print("item ",n.item)
+        time += n.mu
+        ck = n.c * time
+        reward += ck
+    return reward
+
 #Main
 start = time.time()
 init()
@@ -118,10 +127,21 @@ while(len(schedule) < N):
     del(forest[str(maxRhoNode.root.item)])
     i = 0
     makeForest(maxRhoNode.root, maxRhoNode.path)
+    #print("=> ",schedule)
 
 end = time.time()
 
-print("schedule : ", schedule)
+#print("schedule : ", schedule)
+
+naive_sched = []
+for x in range(60):
+    naive_sched.append(x+1)
+
+print(schedule)
+print("=Reward============ ",getReward(schedule))
+
+print(naive_sched)
+print("=Reward============ ",getReward(naive_sched))
 
 #print(f"{end-start:.5f} sec") #0.03237 sec
 
