@@ -1,4 +1,4 @@
-# intern-at-the-Institute-of-Basic-Science
+# intern at the Institute of Basic Science
 
 ------
 ## Summary
