@@ -17,4 +17,3 @@ The code for Expanded c-mu rule is in the **'scheduling'** folder.
 
 And in the Gittin index folder and Baum welch folder, there are out trial and errors.
 For not hierarchical structure, we can use gittin index and baum-welch algorithm but they are not useful for hierarchical structure.
-------
