@@ -3,17 +3,12 @@
 ------
 ## Summary
 
-Strategy in the education means a sequence that contains learning material with some info. ex)Expected learning time, How important it is(weight).
-We wanna get the strategy with E-learning data.
-The data was so dirty that we make them fancy by using Pandas.
-After that, We apply scheduling algorithm for getting optimal stategy.
+Strategy in education refers to a sequence that incorporates learning material along with certain details, such as expected learning time and its importance (weight). Our objective is to devise this strategy using E-learning data. Initially, the data was unstructured, but we transformed it into a more useful format using Pandas. Subsequently, we applied a scheduling algorithm to obtain the optimal strategy.
 
-We made the datas to tree structure by referring student's curriculum and applied the expanded c-mu rule to the tree.
+We structured the data into a tree format by referencing the students' curriculum and applied the expanded c-mu rule to this tree.
 
-Expanded c-mu rule is c-mu rule in the tree.(original c-mu rule was defined just in the set of sequences.)
-We easily proved the Expanded c-mu rule and applied it.(And some people proved this earlier except for we.)
+The expanded c-mu rule is the c-mu rule applied in the context of a tree (the original c-mu rule was defined only within a set of sequences). We were able to prove the expanded c-mu rule with relative ease and apply it. Note that some others have previously proven this rule, excluding us.
 
-The code for Expanded c-mu rule is in the **'scheduling'** folder.
+The code for the expanded c-mu rule can be found in the 'scheduling' folder.
 
-And in the Gittin index folder and Baum welch folder, there are out trial and errors.
-For not hierarchical structure, we can use gittin index and baum-welch algorithm but they are not useful for hierarchical structure.
+Additionally, our trial and error processes can be seen in the Gittin index folder and the Baum-Welch folder. For non-hierarchical structures, we utilized the Gittin index and Baum-Welch algorithm, but they were not suitable for hierarchical structures.
